@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Installation
+title: Installation and required R packages
 ---
 
+
+The minimum requirement for running R scripts is for the working directory (terminal/command prompt) to be the same as the script directory. 
 
 ## Installing R:
 
@@ -42,6 +44,11 @@ After *R* is installed [download](https://github.com/maciverlab/bigeye/blob/mast
 <pre>
 $ Rscript installer.R --cwd
 </pre>
+
+In the unlikely event our code will not work with future R releases you can find and install previous releases of R here: https://cran.r-project.org/bin/windows/base/old/ The latest R version we checked our code with is R 3.3.2. If it turns out you need to roll back to this R version you must also roll back the packages required for our code, as packages are continuously developed alongside the new R updates. Old packages may not work with current versions of R and vice versa. You can roll back to old packages by executing an alternate installer-file, but you really should only do this if you have run into problems related to R and package updates/new versions.
+
+```$ Rscript rollbackinstaller.R --cwd
+```
 
 ## Required packages in MATLAB and requirements:
 
